@@ -1,0 +1,26 @@
+{
+  "name": "mempool-listener",
+  "version": "1.0.0",
+  "description": "Ethereum mempool listener for fraud detection",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "pm2:start": "pm2 start index.js --name mempool-listener",
+    "pm2:stop": "pm2 stop mempool-listener",
+    "pm2:restart": "pm2 restart mempool-listener",
+    "pm2:logs": "pm2 logs mempool-listener"
+  },
+  "keywords": ["ethereum", "mempool", "fraud-detection", "blockchain"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ethers": "^6.15.0",
+    "node-fetch": "^3.3.2",
+    "dotenv": "^17.2.1"
+  },
+  "devDependencies": {
+    "pm2": "^5.3.0"
+  }
+}
