@@ -1,7 +1,7 @@
 {
   "name": "dex's",
   "version": "1.0.0",
-  "description": "",
+  "description": "Decentralized Exchange (DEX) Project",
   "main": "index.js",
   "scripts": {
     "compile": "hardhat compile",
@@ -9,12 +9,17 @@
     "test": "hardhat test",
     "node": "hardhat node",
     "deploy:local": "hardhat run scripts/deploy.js --network localhost",
-    "deploy": "hardhat run scripts/deploy.js"
+    "deploy": "hardhat run scripts/deploy.js",
+    "pm2:node": "pm2 start ./start-hardhat.sh --interpreter /home/ubuntu/.nvm/versions/node/v24.6.0/bin/node --name hardhat-node",
+    "pm2:deploy": "pm2 start ./deploy-local.sh --interpreter /home/ubuntu/.nvm/versions/node/v24.6.0/bin/node --name deploy-local"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["dex", "blockchain", "hardhat"],
+  "author": "Your Name",
   "license": "ISC",
   "type": "commonjs",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^6.1.0",
     "hardhat": "^2.26.3"
